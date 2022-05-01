@@ -4,6 +4,7 @@ import io.ktor.server.application.*
 import com.riskiilyas.plugins.*
 import com.riskiilyas.routes.configureRouting
 
+const val BASE_URL = "http://192.168.56.1:8080"
 fun main(args: Array<String>): Unit =
     io.ktor.server.netty.EngineMain.main(args)
 
