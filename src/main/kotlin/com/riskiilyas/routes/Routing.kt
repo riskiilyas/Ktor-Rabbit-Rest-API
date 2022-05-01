@@ -12,11 +12,16 @@ fun Application.configureRouting() {
         randomRabit()
 
         get("/") {
-            call.respondText("Hello World!")
+            call.respondText("""
+                Hi, Welcome to Rabbit REST API by Riski Ilyas!
+                Here is the list of endpoints that provided by this API:
+                1. Get Random Rabbit:       ' /randomRabbit '
+                2. Get Random Rabbit Breed: ' /randomRabbitBreed '
+            """.trimIndent())
         }
 
         get("/creator") {
-            call.respondText("Owner: Riski Ilyas")
+            call.respondText("Created By: Riski Ilyas")
         }
 
         // Static plugin. Try to access `/static/index.html`

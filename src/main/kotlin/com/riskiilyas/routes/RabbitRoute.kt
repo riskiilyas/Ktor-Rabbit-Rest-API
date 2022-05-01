@@ -1,6 +1,7 @@
 package com.riskiilyas.routes
 
 import com.riskiilyas.models.Rabbit
+import com.riskiilyas.models.RabbitBreeds
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
@@ -14,10 +15,10 @@ fun Route.randomRabit() {
         )
     }
 
-    get("/rabbitsType") {
+    get("/randomRabbitBreed") {
         call.respond(
             HttpStatusCode.OK,
-
+            RabbitBreeds.randomRabbitBreeds()
         )
     }
 }
